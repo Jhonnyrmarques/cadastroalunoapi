@@ -31,8 +31,4 @@ export default class Aluno extends Model {
 
     return this;
   }
-
-  static associate(models) {
-    this.hasMany(models.Disciplina, { foreignKey: 'aluno_id' });
-  }
 }
