@@ -6,6 +6,7 @@ dotenv.config();
 import './database';
 
 import express from 'express';
+import cors from 'cors';
 
 import alunosRoutes from './routes/alunos';
 import fotosRoutes from './routes/images';
@@ -18,6 +19,7 @@ class App {
   }
 
   middlewares() {
+    this.app.use(cors());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use(express.static(resolve(__dirname, 'uploads')));
