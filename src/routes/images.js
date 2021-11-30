@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import ImageController from '../controllers/ImageController';
+import ImageController from '../controllers/FotoController';
 
 const router = new Router();
 
